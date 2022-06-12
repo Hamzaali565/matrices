@@ -1,0 +1,123 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <style></style> -->
+<body>
+    <h1 style="text-align: center; font-size: 80px;">Matrices</h1>
+
+	<button onclick="sum()" style="margin-left: 47%;background-color: black;color: aliceblue;border-radius: 10px; padding-top:10px;padding-bottom: 10px; padding-left: 20px;padding-right: 20px;">START</button><br><br>
+    <p style="text-align: center; ">YOUR INPUT</p>
+	<div style="margin-left: 48%;">
+		
+        <table >
+			<tr>
+				<td id="t1"></td>
+				<td id="t2"></td>
+				<td id="t3"></td>
+			</tr>
+			<tr>
+				<td id="t4"></td>
+				<td id="t5"></td>
+				<td id="t6"></td>
+			</tr>
+			<tr>
+				<td id="t7"></td>
+				<td id="t8"></td>
+				<td id="t9"></td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td id="t10"></td>
+				<td id="t11"></td>
+				<td id="t12"></td>
+			</tr>
+			<tr>
+				<td id="t13"></td>
+				<td id="t14"></td>
+				<td id="t15"></td>
+			</tr>
+			<tr>
+				<td id="t16"></td>
+				<td id="t17"></td>
+				<td id="t18"></td>
+			</tr>
+		</table>
+	</div><br>
+    <p style="text-align: center;">YOUR RESULT</p>
+    <div style="margin-left: 48%;">
+        <table >
+            <tr>
+                <td id="t19"></td>
+                <td id="t20"></td>
+                <td id="t21"></td>
+            </tr>
+            <tr>
+                <td id="t22"></td>
+                <td id="t23"></td>
+                <td id="t24"></td>
+            </tr>
+            <tr>
+                <td id="t25"></td>
+                <td id="t26"></td>
+                <td id="t27"></td>
+            </tr>
+        </table>
+        
+    </div>
+
+	<script>
+		function sum() {
+			let input1= [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			let result = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			for (let i = 0; i < 3; i++) {
+				for (let j = 0; j < 3; j++) {
+					input1[i][j] = Number(prompt("INPUT FOR FIRST MATRIX"));
+				}
+            }
+			let input2= [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+			for (let i = 0; i < 3; i++) {
+				for (let j = 0; j < 3; j++) {
+					input2[i][j] = Number(prompt("INPUT FOR SECOND MATRIX"));
+					result[i][j] = input1[i][j] + input2[i][j];
+				}
+			}
+
+			document.querySelector("#t1").innerHTML = input1[0][0];
+			document.querySelector("#t2").innerHTML = input1[0][1];
+			document.querySelector("#t3").innerHTML = input1[0][2];
+			document.querySelector("#t4").innerHTML = input1[1][0];
+			document.querySelector("#t5").innerHTML =input1 [1][1];
+			document.querySelector("#t6").innerHTML = input1[1][2];
+			document.querySelector("#t7").innerHTML =input1 [2][0];
+			document.querySelector("#t8").innerHTML =input1 [2][1];
+			document.querySelector("#t9").innerHTML = input1[2][2];
+
+			document.querySelector("#t10").innerHTML = input2[0][0];
+			document.querySelector("#t11").innerHTML = input2[0][1];
+			document.querySelector("#t12").innerHTML = input2[0][2];
+			document.querySelector("#t13").innerHTML =input2[1][0];
+			document.querySelector("#t14").innerHTML = input2[1][1];
+			document.querySelector("#t15").innerHTML =input2 [1][2];
+			document.querySelector("#t16").innerHTML =input2 [2][0];
+			document.querySelector("#t17").innerHTML =input2[2][1];
+			document.querySelector("#t18").innerHTML =input2 [2][2];
+
+			document.querySelector("#t19").innerHTML = result[0][0];
+			document.querySelector("#t20").innerHTML = result[0][1];
+			document.querySelector("#t21").innerHTML = result[0][2];
+			document.querySelector("#t22").innerHTML = result[1][0];
+			document.querySelector("#t23").innerHTML = result[1][1];
+			document.querySelector("#t24").innerHTML = result[1][2];
+			document.querySelector("#t25").innerHTML = result[2][0];
+			document.querySelector("#t27").innerHTML = result[2][2];
+			document.querySelector("#t26").innerHTML = result[2][1];
+            }
+	</script>
+</body>
+</html>
